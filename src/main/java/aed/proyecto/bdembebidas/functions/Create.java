@@ -73,8 +73,8 @@ public class Create {
 
 			consult.setString(1, name);
 			consult.setString(2, genre);
-			consult.setString(3, codActor);
-			consult.setString(4, codProducer);
+			consult.setInt(3, Integer.parseInt(codActor));
+			consult.setInt(4, Integer.parseInt(codProducer));
 			consult.executeUpdate();
 			con.close();
 			
