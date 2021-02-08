@@ -176,16 +176,20 @@ public class Main {
 				case "1":
 					Read.readActors();
 					System.out.print("Elige el actor a modificar: ");
-					String codModificarActor = sc.nextLine();
-					Update.updateActor(codModificarActor);
+					String codUpdateActor = sc.nextLine();
+					Update.updateActor(codUpdateActor);
 					break;
 				case "2":
+					Read.readFilms();
+					System.out.print("Elige la película a modificar: ");
+					String codUpdateFilm = sc.nextLine();
+					Update.updateFilm(codUpdateFilm);
 					break;
 				case "3":
 					Read.readProducers();
 					System.out.print("Elige la productora a modificar: ");
-					String codModificarProducer = sc.nextLine();
-					Update.updateProducer(codModificarProducer);
+					String codUpdateProducer = sc.nextLine();
+					Update.updateProducer(codUpdateProducer);
 					break;
 				case "4":
 					exit = true;

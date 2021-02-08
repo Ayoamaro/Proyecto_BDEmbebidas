@@ -55,6 +55,50 @@ public class Update {
 	
 	/*
 	 * --- MODIFICACIÓN ---
+	 * Modificación de una película existente en la base de datos
+	 */
+	public static void updateFilm(String codFilm) {
+		try {
+			Class.forName("org.sqlite.JDBC");
+			Connection con = DriverManager.getConnection(url + nom);
+			String sql = "UPDATE peliculas SET nombrePelicula=?, genero=?, codActores=?, codProductoras=? WHERE codPeliculas = " + codFilm;
+			PreparedStatement consult = con.prepareStatement(sql);
+			
+			String sql2 = "SELECT * FROM peliculas INNER JOIN actores ON actores.codActores = peliculas.codActores "
+					+ "INNER JOIN productoras ON productoras.codProductora = peliculas.codProductoras WHERE codPeliculas = " + codFilm;
+			PreparedStatement modify = con.prepareStatement(sql2);
+			ResultSet result = modify.executeQuery();
+
+			if (result.next()) {
+				System.out.println("");
+				System.out.println("-------------------------");
+				System.out.println("MODIFICACIÓN DE UNA PELÍCULA");
+				System.out.print("Nombre de la película (Actual: " + result.getString("nombrePelicula") + "): ");
+				String newNomFilm = sc.nextLine();
+				System.out.print("Género (Actual: " + result.getString("genero") + "): ");
+				String newGenre = sc.nextLine();
+				System.out.print("Código de Actor (Actual: " + result.getString("nombreActor") + "): ");
+				String newCodActor = sc.nextLine();
+				System.out.print("Código de Productora (Actual: " + result.getString("nombreProductora") + "): ");
+				String newCodProducer = sc.nextLine();
+				System.out.println("-------------------------");
+				System.out.println("");
+
+				consult.setString(1, newNomFilm);
+				consult.setString(2, newGenre);
+				consult.setInt(3, Integer.parseInt(newCodActor));
+				consult.setInt(4, Integer.parseInt(newCodProducer));
+			}
+			consult.executeUpdate();
+			con.close();
+			
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
+	
+	/*
+	 * --- MODIFICACIÓN ---
 	 * Modificación de un actor existente en la base de datos
 	 */
 	public static void updateProducer(String codProducer) {
@@ -83,7 +127,7 @@ public class Update {
 
 				consult.setString(1, newNomProducer);
 				consult.setString(2, newCountry);
-				consult.setString(3, newFoundation);
+				consult.setInt(3, Integer.parseInt(newFoundation));
 			}
 			consult.executeUpdate();
 			con.close();
