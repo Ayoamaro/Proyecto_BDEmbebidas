@@ -1,6 +1,8 @@
 # Proyecto Películas Java
 Proyecto CRUD en Java que permita trabajar en una BD Embebida de SQLITE. Se realizará un proyecto en Java accediendo a la base de datos de dbPeliculas.
 
+![](C:\Users\Ayoze\eclipse-workspace\Proyecto_BDEmbebidas\docs\images\dbBrowerSQLite.PNG)
+
 El proyecto tendrá un menú principal en el cual mostraremos las opciones que tendremos disponibles trabajando con archivo SQLITE. Las opciones serán:
 
 - Visualiza todos los datos de la tabla actores, películas y productoras
