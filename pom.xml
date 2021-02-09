@@ -4,7 +4,7 @@
   <artifactId>Proyecto_BDEmbebidas</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <name>Fútbol. Proyecto de Bases de datos Emebebidas</name>
+  <name>Películas. Proyecto de Bases de Datos Embebidas</name>
 	<description>CRUD basado en la base de datos dbpeliculas.</description>
 
 	<properties>
@@ -14,7 +14,7 @@
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+		<!-- SQLITE -->
 		<dependency>
     		<groupId>org.xerial</groupId>
     		<artifactId>sqlite-jdbc</artifactId>

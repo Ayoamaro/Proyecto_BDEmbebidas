@@ -3,6 +3,7 @@ package aed.proyecto.bdembebidas;
 import java.util.Scanner;
 
 import aed.proyecto.bdembebidas.functions.Create;
+import aed.proyecto.bdembebidas.functions.Delete;
 import aed.proyecto.bdembebidas.functions.Read;
 import aed.proyecto.bdembebidas.functions.Update;
 
@@ -27,7 +28,7 @@ public class Main {
 
 	private static void optionMenu() {
 		try {
-			System.out.println("Bienvenido al Proyecto Java de 'dbPeliculas' realizado con SQLITE");
+			System.out.println("Bienvenido al CRUD de Java gestionado con SQLITE");
 			System.out.println("");
 			System.out.println("1. Listar datos");
 			System.out.println("2. Insertar datos");
@@ -45,6 +46,7 @@ public class Main {
 					createData();
 					break;
 				case "3":
+					deleteData();
 					break;
 				case "4":
 					updateData();
@@ -143,10 +145,22 @@ public class Main {
 
 			switch (select) {
 				case "1":
+					Read.readActors();
+					System.out.print("Elige el actor a eliminar: ");
+					String codDeleteActor = sc.nextLine();
+					Delete.deleteActor(codDeleteActor);
 					break;
 				case "2":
+					Read.readFilms();
+					System.out.print("Elige la película a eliminar: ");
+					String codDeleteFilm = sc.nextLine();
+					Delete.deleteFilm(codDeleteFilm);
 					break;
 				case "3":
+					Read.readProducers();
+					System.out.print("Elige la productora a eliminar: ");
+					String codDeleteProducer = sc.nextLine();
+					Delete.deleteProducer(codDeleteProducer);
 					break;
 				case "4":
 					exit = true;
