@@ -1,6 +1,6 @@
 # Proyecto BD Embebidas
 
-Proyecto CRUD en Java que permita trabajar en una BD Embebida de SQLITE. Se realizará un proyecto en Java accediendo a la base de datos de dbPeliculas.
+Proyecto CRUD en Java que permita trabajar en una BD Embebida de SQLITE. Se realizará un proyecto en Java accediendo a la base de datos dbPeliculas que contendrá al menos 2 tablas con registros.
 
 ![](https://github.com/Ayoamaro/Proyecto_BDEmbebidas/blob/main/docs/images/dbBrowerSQLite.PNG?raw=true)
 
