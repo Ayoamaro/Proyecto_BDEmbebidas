@@ -22,4 +22,4 @@ Por último, se realizará un informe donde se expondrá lo siguiente:
 5. Lenguaje de programación elegido
 6. Como realizar la conexión a la BD
 7. Funcionamiento del CRUD
-8. Anexos
+8. Bibliografía
