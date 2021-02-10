@@ -63,11 +63,11 @@ public class Read {
 			while (result.next()) {
 				String codProducer = result.getString("codPeliculas");
 				String name = result.getString("nombrePelicula");
-				String country = result.getString("genero");
+				String genre = result.getString("genero");
 				String actor = result.getString("nombreActor");
 				String producer = result.getString("nombreProductora");
 				
-				System.out.println("{" + codProducer + "}:" + " " + name + " - " + country + " - " + actor + " - " + producer);
+				System.out.println("{" + codProducer + "}:" + " " + name + " - " + genre + " - " + actor + " - " + producer);
 			}
 			System.out.println("-------------------------");
 			System.out.println("");
